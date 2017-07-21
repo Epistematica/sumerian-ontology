@@ -1,0 +1,225 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:logi="http://www.epistematica.com/ontologies/Ur_Namma#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://www.epistematica.com/ontologies/Ur_Namma#">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment xml:lang="en">Ur Namma: An OWL Ontology of a Sumerian Text</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >11-07-2006 v. 1.0.0</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.epistematica.com/ontologies/Ur_Namma.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="PronominalInfixes">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ConjugationPrefix"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="DimensionalInfixes"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Verb"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <PronominalInfixes rdf:ID="b"/>
+              <PronominalInfixes rdf:ID="n"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class rdf:ID="ElementOfVerbalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#DimensionalInfixes">
+    <owl:disjointWith rdf:resource="#PronominalInfixes"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <DimensionalInfixes rdf:ID="na"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class rdf:about="#ElementOfVerbalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#ConjugationPrefix"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Verb"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#ConjugationPrefix">
+    <owl:disjointWith rdf:resource="#PronominalInfixes"/>
+    <owl:disjointWith rdf:resource="#DimensionalInfixes"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Verb"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <ConjugationPrefix rdf:ID="al"/>
+              <ConjugationPrefix rdf:ID="i"/>
+              <ConjugationPrefix rdf:ID="mu"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class rdf:about="#ElementOfVerbalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="Noun">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Genitive"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="ElementOfNominalChain"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="IsFollowedBy"/>
+            </owl:onProperty>
+            <owl:someValuesFrom>
+              <owl:Class rdf:ID="Case"/>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="PossessiveSuffixes"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Particle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Case"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Verb">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:someValuesFrom rdf:resource="#PronominalInfixes"/>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="IsPrecededBy"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Class rdf:about="#ElementOfVerbalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith rdf:resource="#PronominalInfixes"/>
+    <owl:disjointWith rdf:resource="#ConjugationPrefix"/>
+    <owl:disjointWith rdf:resource="#DimensionalInfixes"/>
+  </owl:Class>
+  <owl:Class rdf:about="#PossessiveSuffixes">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Case"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Noun"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Particle"/>
+    </owl:disjointWith>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <PossessiveSuffixes rdf:ID="ani"/>
+              <PossessiveSuffixes rdf:ID="anene"/>
+              <PossessiveSuffixes rdf:ID="gu10"/>
+              <PossessiveSuffixes rdf:ID="me"/>
+              <PossessiveSuffixes rdf:ID="zunene"/>
+              <PossessiveSuffixes rdf:ID="bi"/>
+              <PossessiveSuffixes rdf:ID="zu"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class rdf:about="#ElementOfNominalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Genitive"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Particle">
+    <owl:disjointWith rdf:resource="#PossessiveSuffixes"/>
+    <rdfs:subClassOf rdf:resource="#ElementOfNominalChain"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Genitive"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Case"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Noun"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Case">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:oneOf rdf:parseType="Collection">
+              <Case rdf:ID="da"/>
+              <Case rdf:ID="gin7"/>
+              <Case rdf:ID="ta"/>
+              <Case rdf:ID="Ø"/>
+              <Case rdf:ID="še3"/>
+              <Case rdf:ID="e"/>
+              <Case rdf:ID="ra"/>
+            </owl:oneOf>
+          </owl:Class>
+          <owl:Class rdf:about="#ElementOfNominalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith rdf:resource="#Particle"/>
+    <owl:disjointWith rdf:resource="#Noun"/>
+    <owl:disjointWith rdf:resource="#PossessiveSuffixes"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Genitive"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Genitive">
+    <owl:disjointWith rdf:resource="#Particle"/>
+    <owl:disjointWith rdf:resource="#PossessiveSuffixes"/>
+    <owl:disjointWith rdf:resource="#Case"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="#IsFollowedBy"/>
+            <owl:hasValue>
+              <Particle rdf:ID="ak"/>
+            </owl:hasValue>
+          </owl:Restriction>
+          <owl:Class rdf:about="#ElementOfNominalChain"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <owl:disjointWith rdf:resource="#Noun"/>
+  </owl:Class>
+  <ElementOfNominalChain rdf:ID="bad"/>
+  <ElementOfNominalChain rdf:ID="Urnamma.e"/>
+  <ElementOfNominalChain rdf:ID="lugal.ani.ra"/>
+  <ElementOfNominalChain rdf:ID="urim.ak"/>
+  <ElementOfNominalChain rdf:ID="nanna.ra"/>
+  <ElementOfVerbalChain rdf:ID="du3"/>
+  <ElementOfNominalChain rdf:ID="e.ani."/>
+</rdf:RDF>
+
+<!-- CC BY-NC-ND 3.0 - 2005 Epistematica - some rights reserved -->

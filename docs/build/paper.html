@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ur_Namma, an OWL ontology of a sumerian grammar &mdash; An OWL Ontology of a Sumerian Grammar  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="An OWL Ontology of a Sumerian Grammar  documentation" href="index.html"/>
+        <link rel="prev" title="Ontology" href="ontology.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> An OWL Ontology of a Sumerian Grammar
+          
+
+          
+            
+            <img src="_static/logo-black.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project.html">Project scope</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project.html#a-formal-representation-of-a-sumerian-grammar">A formal representation of a Sumerian Grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project.html#the-choice-sumerian-text">The choice sumerian text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ontology.html">Ontology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ontology.html#download-the-ontology-from-github">Download the ontology from GitHub</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ur_Namma, an OWL ontology of a sumerian grammar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#foreword">Foreword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-research">The Research</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-elementsofnominalchain-class">The “ElementsOfNominalChain” class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-elementsofverbalchain-class">The “ElementsOfVerbalChain” class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annex">Annex</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">An OWL Ontology of a Sumerian Grammar</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Ur_Namma, an OWL ontology of a sumerian grammar</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/paper.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ur-namma-an-owl-ontology-of-a-sumerian-grammar">
+<h1>Ur_Namma, an OWL ontology of a sumerian grammar<a class="headerlink" href="#ur-namma-an-owl-ontology-of-a-sumerian-grammar" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Authors:</th><td class="field-body">Sergio Alivernini <a class="footnote-reference" href="#id5" id="id1">[1]</a>
+Franco D’Agostino <a class="footnote-reference" href="#id6" id="id2">[2]</a>
+Marco Romano <a class="footnote-reference" href="#id7" id="id3">[3]</a>
+Luca Severini <a class="footnote-reference" href="#id8" id="id4">[4]</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">latest</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Date:</th><td class="field-body">11th July 2006</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="foreword">
+<h2>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h2>
+<p>The construction of an ontology of the Sumerian language has been part
+of a wider project of the company Epistematica for testing “Semantic Web
+Technology” and its application on the computational linguistics. In
+this context, the company has already completed a project, with the
+collaboration of Dr. Marco Romano, to design an ontology of Esperanto to
+demonstrate the possibility of realizing a linguistic parser with
+reasoning skills. After this experience, it seemed appropriate to test
+this procedure on a language that was not artificial like the Esperanto,
+but natural; a language that had an evolving grammar and a more complex
+history.</p>
+<p>The Sumerian language flourished in a region called “Mesopotamia”
+(between the two rivers Tigris and Euphrates in the modern Iraq)
+documented from the half of IV millennium BC. It was spoken until the
+end of III millennium when the Sumerian disappeared. But people that
+during the centuries took the power in Mesopotamia continued to use it
+as refined speech in the written documents until the II century AD given
+its enormous literary, religious and political tradition.</p>
+<p>The main characteristic of Sumerian is to be agglutinative, that is the
+word (verb, substantive, adjective etc.) we read in a given text is
+identical with the word we find in the vocabulary. In other words the
+modifications (for example from singular to plural) do not change it
+directly (like, for example in English dog → dogs); the specification of
+the meaning happens with morphems added, agglutinated to the
+unmodifiable word in a fixed order before or after it or by duplicating
+a word (lugal = king → lugal-lugal = kings). This characteristic makes
+it particularly suitable for the construction of an ontology due to an
+easier identification of the morphemes.</p>
+</div>
+<div class="section" id="the-research">
+<h2>The Research<a class="headerlink" href="#the-research" title="Permalink to this headline">¶</a></h2>
+<p>This project has been developed in two different steps: in the first one
+a tutor (Dr. Marco Romano) taught me how to use the programs to manage
+the ontologies OWL format: Protégé 3.2 e RacerPro 1.8, whilst in the
+second one, the ontology was developed.</p>
+<p>An ontology is composed by two elements: a T-Box (Terminological Box),
+and an A-Box (Assertions Box). The T-box is the taxonomic part of
+ontology, where concepts (and the hierarchy that exists among them) are
+defined, and where we formalize the relationships hording between
+different concepts. It is the “shape” of the ontology. The A-Box is the
+part of the ontology that contains the facts, where individual instances
+are classified as belonging to a specific class and where properties
+that are defined for the classes are given a value for each instance. It
+is the “substance” of the ontology. In the case of Sumerian, the T-Box
+is the Sumerian grammar, while the A-Box is represented by every
+Sumerian text that can be formalized in the grammar described in the
+T-Box. Given the fact that this ontology represented an “experiment”, it
+was decided not to use a long text, but one which could show some of the
+most common grammatical features of the Sumerian language in order to
+obtain a small but consistent and fully instantiated A-Box.</p>
+<p>After analysing some texts the choice fell on a foundation brick of the
+king Ur-Namma, king and founder of the Third Dynasty of Ur, who ruled in
+Mesopotamia between 2112 and 2095 BC. The transliteration and
+translation of the text is the follow:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="67%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><sup>d</sup>Nanna</td>
+<td>to the God Nanna</td>
+</tr>
+<tr class="row-even"><td>lugal-a-ni</td>
+<td>his king</td>
+</tr>
+<tr class="row-odd"><td>Ur-<sup>d</sup>Namma</td>
+<td>Ur-<sup>d</sup>Namma</td>
+</tr>
+<tr class="row-even"><td>lugal-Urim<sub>5</sub><sup>ki</sup>-ma-ke<sub>4</sub></td>
+<td>king of Ur</td>
+</tr>
+<tr class="row-odd"><td>e<sub>2</sub>-a-ni</td>
+<td>his temple</td>
+</tr>
+<tr class="row-even"><td>mu-na-du<sub>3</sub></td>
+<td>he built</td>
+</tr>
+<tr class="row-odd"><td>bad<sub>3</sub>-Urim<sub>5ki</sub>-ma</td>
+<td>the walls of Ur</td>
+</tr>
+<tr class="row-even"><td>mu-na-du<sub>3</sub></td>
+<td>he built</td>
+</tr>
+</tbody>
+</table>
+<p>This transliteration in Latin characters shows the value of each sign
+that appears on the brick, but the reality of the grammar of this text
+is not highlighted by this transliteration. To highlight the different
+grammatical parts it is necessary that the scholars make a further
+effort adding the elements that do not appear on the brick or joining
+the signs that represent a unique grammatical element:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Nanna.ra</td>
+</tr>
+<tr class="row-even"><td>lugal.ani</td>
+</tr>
+<tr class="row-odd"><td>Ur-<sup>d</sup>Namma</td>
+</tr>
+<tr class="row-even"><td>lugal.Urim<sub>5</sub><sup>ki</sup>.ak.e</td>
+</tr>
+<tr class="row-odd"><td>e<sub>2</sub>.ani.Ø</td>
+</tr>
+<tr class="row-even"><td>mu.na.n.du</td>
+</tr>
+<tr class="row-odd"><td>bad.Urim<sub>5</sub><sup>ki</sup>.ak.Ø</td>
+</tr>
+<tr class="row-even"><td>mu.na.n.du</td>
+</tr>
+</tbody>
+</table>
+<p>This text represents our A-Box. The T-Box has been formalized based on
+the grammar in this text. It is obvious that this text does not show all
+the grammatical features of Sumerian language, that is the T-Box
+developed here represents only a part of the grammar.</p>
+<p>The Sumerian has two main structures: the nominal chain and the verbal
+chain. Both are composed by different elements and their positions are
+unmodifiable. So I have developed two classes “ElementsOfNominalChain”
+and “ElementsOfVerbalChain”.</p>
+</div>
+<div class="section" id="the-elementsofnominalchain-class">
+<h2>The “ElementsOfNominalChain” class<a class="headerlink" href="#the-elementsofnominalchain-class" title="Permalink to this headline">¶</a></h2>
+<p>In the Sumerian grammar the elements that compose the nominal chain are
+six: noun, adjective, genitive, possessive, plural suffix <code class="docutils literal"><span class="pre">-ene</span></code> and
+case. In our A-Box there were not all the six elements. As sub-classes I
+took only the elements in the Ur-Namma brick foundation that is noun,
+genitive, possessive and case. I added to this four sub-classes, a fifth
+one “particle”, which was used to better define the “genitive”. Three of
+these five sub-classes (possessive, case and particle) represent sets
+that are numerically limited so I defined it with the elements that
+composed it:</p>
+<ul class="simple">
+<li>Possessive: <code class="docutils literal"><span class="pre">gu10</span></code>, <code class="docutils literal"><span class="pre">zu</span></code>, <code class="docutils literal"><span class="pre">ani</span></code>, <code class="docutils literal"><span class="pre">bi</span></code>, <code class="docutils literal"><span class="pre">me</span></code>, <code class="docutils literal"><span class="pre">zunene</span></code>, <code class="docutils literal"><span class="pre">anene</span></code></li>
+<li>Case: <code class="docutils literal"><span class="pre">e</span></code>, <code class="docutils literal"><span class="pre">0</span></code>, <code class="docutils literal"><span class="pre">ra</span></code>, <code class="docutils literal"><span class="pre">da</span></code>, <code class="docutils literal"><span class="pre">še3</span></code>, <code class="docutils literal"><span class="pre">ta</span></code>, <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">gin7</span></code></li>
+<li>Particle: <code class="docutils literal"><span class="pre">ak</span></code></li>
+</ul>
+<p>Moreover, to better define the sub-class “particle”, I created an
+“object property” “FollowedBy” with the condition that the “particle” is
+followed by the particle <code class="docutils literal"><span class="pre">ak</span></code>; the sub-class “noun” was defined as a
+word that is always followed by the “case”.</p>
+</div>
+<div class="section" id="the-elementsofverbalchain-class">
+<h2>The “ElementsOfVerbalChain” class<a class="headerlink" href="#the-elementsofverbalchain-class" title="Permalink to this headline">¶</a></h2>
+<p>The verbal chain of Sumerian language is composed by eight elements:
+modal prefixes, conjugation prefixes (here called simply “prefix”),
+dimensional infixes, pronominal infixes, verbal root, suffix <code class="docutils literal"><span class="pre">-</span> <span class="pre">ed</span></code>,
+pronominal suffixes, postpositions. Even in this case, as already
+written above, our A-Box does not contain all these elements. Our
+sub-classes are therefore just the followings: Prefix, DimensionalInfix,
+PronominalInfix and VerbalRoot; three of them are composed by a defined
+number of elements:</p>
+<ul class="simple">
+<li>Prefix: <code class="docutils literal"><span class="pre">mu</span></code></li>
+<li>DimensionalInfix: <code class="docutils literal"><span class="pre">na</span></code></li>
+<li>PronominalInfix: <code class="docutils literal"><span class="pre">n</span></code></li>
+</ul>
+<p>The definition of “VerbalRoot” was, on the contrary, more complex. The
+solution was to use the structure for position of Sumerian. So I defined
+“VerbalRoot” as the elements of Verbal Chain that follow the
+“PronominalInfix”. Therefore I created an “object property” “PrecededBy”
+applying it to the “VerbalRoot” with the condition that it was preceded
+by the sub-class “PronominalInfix”.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>As I said above, this ontology is only an experiment, an attempt, but
+this work shows, however, that it is possible to apply the technologies
+of the Semantic Web to a natural language as well. This seems to be the
+right track and I am sure that these technologies will be able to
+provide important new tools not only for Sumerian, but also for many
+other linguistic aspects.</p>
+</div>
+<div class="section" id="annex">
+<h2>Annex<a class="headerlink" href="#annex" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The ontology in OWL format <strong>Ur_Namma.owl</strong></p>
+</div>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>PhD in Assyriology</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Assistant Professor of Assyriology at University of Rome Sapienza</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>PhD in Logics and Informatics</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>Founder of Epistematica, holder of the research project</td></tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ontology.html" class="btn btn-neutral" title="Ontology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2006-2017, Epistematica.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
